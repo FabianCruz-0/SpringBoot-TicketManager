@@ -1,4 +1,4 @@
 # DB Design 
 
 ##### Diagram of the DB.
-![DB Design](/DB%20Design.jpg)
+![DB Design](https://raw.githubusercontent.com/FabianCruz-0/SpringBoot-TicketManager/main/DB%20Design/DB%20Design.jpg)
