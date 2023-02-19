@@ -5,6 +5,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
@@ -14,13 +15,40 @@ public class TicketRepositoryImp implements TicketRepository {
 
 	@PersistenceContext
 	private EntityManager em;
+	String query;
 	
 	@Override
 	@Transactional
 	public List<Ticket> getTickets() {
-		String query = "FROM Ticket"; //class name, not db table name
+		query = "FROM Ticket"; //class name, not db table name
 		return em.createQuery(query).getResultList();
 
+	}
+
+	@Override
+	@Transactional
+	public Ticket getTicketById(int id) {
+		query = "FROM Ticket WHERE id = :id";
+		List<Ticket> tickets = em.createQuery(query).setParameter("id",id).getResultList();
+		return tickets.get(0);
+	}
+
+	@Override
+	public String deleteTicketById(int id) {
+		query = "DELETE FROM Ticket WHERE id = :id";
+		em.createQuery(query).setParameter("id",id).executeUpdate();
+		return "DELETED";
+
+		/*
+		Ticket ticket = em.find(Ticket.class, id);
+		entityManager.remove(ticket);
+		 */
+	}
+
+	@Override
+	public String createTicket(Ticket ticket) {
+		em.merge(ticket);
+		return "CREATED";
 	}
 
 }

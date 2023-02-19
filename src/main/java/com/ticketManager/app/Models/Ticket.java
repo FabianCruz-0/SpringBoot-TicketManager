@@ -1,9 +1,7 @@
 package com.ticketManager.app.Models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.annotation.Generated;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +16,7 @@ public class Ticket {
 	}
 	@Id
 	@Column
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public Long id;
 	@Column
 	public String title;
