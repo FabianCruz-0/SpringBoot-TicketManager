@@ -1,4 +1,4 @@
-package com.ticketManager.app;
+package com.ticketmanager.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

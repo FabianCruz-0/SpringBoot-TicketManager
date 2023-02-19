@@ -1,11 +1,10 @@
-package com.ticketManager.app.Repositories;
+package com.ticketmanager.app.Repositories;
 
-import com.ticketManager.app.Models.Ticket;
+import com.ticketmanager.app.Models.Ticket;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 

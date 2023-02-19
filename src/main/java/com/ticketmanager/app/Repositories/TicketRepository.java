@@ -1,7 +1,6 @@
-package com.ticketManager.app.Repositories;
+package com.ticketmanager.app.Repositories;
 
-import com.ticketManager.app.Models.Ticket;
-import org.springframework.web.servlet.view.RedirectView;
+import com.ticketmanager.app.Models.Ticket;
 
 import java.util.List;
 

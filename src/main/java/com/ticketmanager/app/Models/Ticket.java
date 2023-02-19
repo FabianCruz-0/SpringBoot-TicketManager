@@ -1,6 +1,5 @@
-package com.ticketManager.app.Models;
+package com.ticketmanager.app.Models;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
