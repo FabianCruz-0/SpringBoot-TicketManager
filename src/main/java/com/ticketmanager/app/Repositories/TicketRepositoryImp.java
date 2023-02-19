@@ -39,6 +39,8 @@ public class TicketRepositoryImp implements TicketRepository {
 		return "DELETED";
 
 		/*
+		-This also works -
+		
 		Ticket ticket = em.find(Ticket.class, id);
 		entityManager.remove(ticket);
 		 */

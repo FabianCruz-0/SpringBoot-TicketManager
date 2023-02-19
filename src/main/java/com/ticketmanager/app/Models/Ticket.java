@@ -10,8 +10,7 @@ import lombok.Setter;
 @Table(name = "Ticket")
 public class Ticket {
 
-	public Ticket(){
-
+	public Ticket(){ //  default implementation ignored
 	}
 	@Id
 	@Column

@@ -17,17 +17,17 @@ public class TicketController {
 	@Autowired
 	private Environment env;
 	
-	@RequestMapping(value="api/tickets",method = RequestMethod.GET)
+	@GetMapping(value="api/tickets")
 	public List<Ticket> getTickets() {
 		return ticketRepository.getTickets();
 	}
 
-	@RequestMapping(value = "api/ticket/{id}", method = RequestMethod.GET)
+	@GetMapping(value = "api/ticket/{id}")
 	public Ticket getTicketById(@PathVariable int id) { return  ticketRepository.getTicketById(id); }
 
-	@RequestMapping(value = "api/ticket/delete/{id}", method = RequestMethod.DELETE)
+	@DeleteMapping(value = "api/ticket/delete/{id}")
 	public String deleteTicketById(@PathVariable int id) { return  ticketRepository.deleteTicketById(id); }
 
-	@RequestMapping(value = "api/ticket/create", method = RequestMethod.POST)
+	@PostMapping(value = "api/ticket/create")
 	public String deleteTicketById(@RequestBody Ticket ticket) { return  ticketRepository.createTicket(ticket); }
 }
